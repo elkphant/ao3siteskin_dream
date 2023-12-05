@@ -1,0 +1,1700 @@
+/*
+背景顏色Background color (沒有圖片時when there's no image)：#1A1C26
+區塊背景Block background (透明度40% with opacity 40%)：#00000066
+其他背景Other background (透明度67% with opacity 67%)：#000000aa、#222222aa、#444444aa
+文字/邊框font/border colors：(白white)#FFF、#DDD、#BBB；(黑black)#000、#222、#444
+主色Main color：藍#A7B2F2
+其他Other colors：綠(已回replied messages)#A7F2B2、黃(提示notice/notes)#F2E2A7、紅(未讀unread- messages)#F2A7B2、橘(注意caution)#F2C2A7、紫#CDA7F2
+*/
+
+body,
+.javascript,
+#outer {
+	color: #fff;
+	background: #1A1C26;
+}
+
+#outer.wrapper {
+	background-image: url(https://i.imgur.com/nbESEE8.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: normal;
+}
+
+/*==去除陰影Delet box shadow==*/
+* {
+	box-shadow: none !important;
+}
+
+/*==字型font-family==*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+	font-family: Lora, Palatino Linotype, Bookman Old Style, "Book Antiqua", "Noto Serif TC", "Noto Serif CJK TC", Georgia, serif;
+	font-weight: 600;
+}
+
+h4.heading,
+h5.heading {
+	font-weight: bold;
+}
+
+body,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+blockquote,
+input,
+textarea,
+button,
+.heading .actions,
+.heading .action,
+.heading span.actions,
+span.unread,
+.replied,
+span.claimed,
+.actions span.defaulted,
+.bookmark .user .meta,
+.filters dt, 
+.filters dd, 
+.filters input[type=submit], 
+.filters .expander, 
+a.work, 
+span.symbol, 
+select, #stat_chart svg text,
+dl.stats,
+dd.language {
+	font-family: Sarabun, Leelawadee UI, 'Lucida Sans Unicode', Verdana, "Noto Sans TC", "Noto Sans CJK TC", sans-serif;
+}
+
+kbd,
+tt,
+code,
+var,
+pre,
+samp,
+.datetime,
+.splash .news .meta {
+	font-family: Monaco, Consolas, Noto Mono, Courier, monospace;
+}
+
+pre {
+	overflow-wrap: break-word;
+	word-break: break-word;
+}
+
+code {
+	padding-left: 6px; 
+	padding-right: 6px;
+}
+
+/*==字號font size==*/
+#main,
+.splash .news .meta,
+kbd, tt, code, var, pre, samp {
+	font-size: .925em;
+}
+
+#header,
+#footer {
+	font-size: .875em;
+}
+
+.splash .latest .post .heading {
+	font-size: 1.286em;
+}
+
+.userstuff,
+textarea,
+textarea:focus {
+	font-size: initial;
+}
+
+select,
+h2.heading a.tag {
+	font-size: inherit;
+}
+
+.bookmark h5.byline.heading a,
+.blurb h5.fandoms.heading a.tag {
+	font-size: initial;
+}
+
+/*Title anchors---first or only type*/
+dl.index dt a:first-of-type, 
+dl.index dt a:only-of-type,
+ul.index dt a {
+	font-size: 1.286em;
+}
+
+.blurb .header h4.heading a:first-of-type,
+.blurb .header h4.heading a:only-of-type {
+	display: block;
+	font-size: 1.714em;
+	margin-bottom: .143em;
+}
+
+/*==Module Background==*/
+.module {
+	background: #00000066;
+	border: none;
+	border-radius: .5em;
+}
+
+.header.module,
+.bio.module,
+.actions.module,
+.summary.module,
+.notes.module,
+.series.module,
+.user.module,
+.parents.module,
+.children.module,
+.recent.module {
+	background: none;
+	border-radius: 0;
+}
+
+.news.module.group {
+	width: 95%;
+	padding: 0 2.5%;
+	margin-bottom: 2.5%;
+}
+
+/*==Meta Background==*/
+dl.meta {
+	background: #00000066;
+	border-color: transparent;
+	border-radius: .5em;
+}
+
+/*==頁首header、頁尾footer==*/
+#header .heading sup,
+#header .logo,
+#greeting .icon {
+	display: none;
+}
+
+#header a,
+#header a:visited,
+#header .primary a,
+#header .primary .open a,
+#header .primary .dropdown:hover a {
+	color: #fff;
+}
+
+#header .primary .dropdown a:hover,
+#header .primary .dropdown a:focus {
+	color: #A7B2F2;
+}
+
+#header .user a:hover, 
+#header .user a:focus,
+#header .actions a:hover, 
+#header .actions a:focus,
+#header .user .open a:hover,
+#header .user .open a:focus,
+#header .dropdown a:hover,
+#header .dropdown a:focus, 
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:focus {
+	color: #A7B2F2;
+	background: #000;
+}
+
+#header .heading a {
+	color: #A7B2F2;
+}
+
+#header .dropdown:hover a, 
+#header .open a, 
+#header .menu, 
+#small_login {
+	background: #000;
+}
+
+#header .dropdown .menu a:hover, 
+#header .dropdown .menu a:focus {
+	background: #222;
+}
+
+#header .primary,
+#footer {
+	background: 0 0;
+	border-color: transparent;
+}
+
+#header .menu li {
+	border-color: #444;
+}
+
+.search [role=tooltip] {
+	color: #fff;
+	background: #000;
+	border-color: #A7B2F2;
+}
+
+#header #search input,
+#header #search .text, 
+#header #search .button {
+	color: #fff;
+	background: #222;
+	border: 1px solid #444;
+}
+
+#header #search input:focus {
+	color: #fff;
+	background: #000;
+	border-color: #A7B2F2;
+}
+
+#footer .module {
+	background: #00000066;
+	margin: 0 .5%;
+}
+
+#footer,
+#footer .heading,
+#footer a {
+	color: #fff;
+}
+
+#header h2,
+#header h2.collections {
+	font-weight: bold;
+	color: #000;
+	background-color: #A7B2F2;
+	border: none;
+}
+
+/*==首頁Home page==*/
+.splash > .module > ul {
+	margin: .643em;
+}
+
+.splash > .module > div {
+	margin: .643em !important;
+}
+
+.splash .module h3 {
+	color: #A7B2F2;
+	border: none;
+}
+
+.splash .favorite li a {
+	display: block;
+	line-height: 1.75;
+	border-radius: 0;
+}
+
+.splash .favorite li:nth-of-type(odd) a {
+	color: #fff;
+	background: #222222aa;
+}
+
+.splash .favorite li:nth-of-type(even) a {
+	color: #fff;
+	background: #000000aa;
+}
+
+.splash .news li:nth-of-type(odd) {
+	background: #222222aa;
+	border-color: transparent;
+}
+
+.splash .news li:nth-of-type(even) {
+	background: #000000aa;
+	border-color: transparent;
+}
+
+.splash .blurb {
+	max-height: 25em;
+	overflow-y: auto;
+	margin-bottom: 1.286em;
+}
+
+/*==儀錶板Dashboard page==*/
+/*Dashboard*/
+#dashboard,
+#dashboard.own {
+	border: none;
+	background: #00000066;
+}
+
+#dashboard ul {
+	border-color: #222;
+}
+
+#dashboard a, 
+#dashboard span {
+	color: #fff;
+}
+
+#dashboard a:hover,
+#dashboard a:focus {
+	color: #000;
+	background: #A7B2F2;
+	outline: none;
+}
+
+#dashboard .current {
+	color: #A7B2F2;
+	background: none;
+	border-inline: 2px solid;
+	border-radius: 0;
+}
+
+.secondary {
+	background: #000;
+	border-color: #222;
+	border-radius: .25em;
+}
+
+#dashboard .secondary {
+	background: #222222aa;
+	border-color: #222;
+	border-radius: .25em;
+}
+
+/*User Home*/
+.home .header h2 {
+	border: none;
+}
+
+.home.profile .primary {
+	margin-bottom: 1.286em;
+}
+
+.listbox {
+	background: #00000066;
+	border-color: transparent;
+	border-radius: .5em;
+}
+
+.listbox>.heading {
+	color: #fff;
+}
+
+.listbox .index {
+	background: none;
+}
+
+.dashboard li.blurb, 
+li.blurb {
+	background: #00000066;
+	border-color: #000;
+	border-radius: .25em;
+}
+
+.own, 
+.draft, 
+.draft .wrapper, 
+.unread, 
+.child, 
+.unwrangled, 
+.unreviewed {
+	background: #222222aa;
+	border-color: #444;
+}
+
+/*Work blurb*/
+.blurb .header .heading {
+	text-align: center;
+	margin: .375em 60px;
+}
+
+.blurb h4 img {
+	color: #A7B2F2;
+	vertical-align: baseline;
+}
+
+.blurb .header h4.heading {
+	min-height: 53px;
+}
+
+.blurb h5.fandoms.heading {
+	font-size: 0;
+	margin: 3px 0;
+}
+
+.blurb h5.fandoms.heading a.tag {
+	margin-right: 6px;
+}
+
+.tags li {
+	padding: 0;
+}
+
+.blurb blockquote {
+	text-align: left;
+}
+
+.blurb .symbol.question span.text {
+	font-size: 0;
+}
+
+.blurb .datetime {
+	max-width: 60px;
+	text-align: right;
+}
+
+.blurb dl.stats dd.chapters a {
+	background: #000;
+	border-radius: .25em;
+	padding: .25em;
+}
+
+.bookmark .count a {
+	color: #000;
+	line-height: 1.5em;
+}
+
+.bookmark .user {
+	border-color: #444;
+	border-radius: .25em;
+}
+
+div.dynamic {
+	background: none; 
+}
+
+.bookmark .recent .index {
+	width: auto;
+}
+
+.bookmark .recent.dynamic .short {
+	background: #222222aa;
+	border-color: transparent;
+}
+
+.bookmark h5.byline.heading,
+.bookmark h6.meta.heading {
+	font-size: 0;
+	text-align: left;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.bookmark h5.byline.heading a {
+	margin: 3px .25em;
+}
+
+.bookmark .user .datetime, 
+.bookmark .short .datetime {
+	max-width: max-content;
+}
+
+.bookmark .user .byline {
+	margin-right: 100px;
+}
+
+.bookmark .short .header h5 {
+	margin-left: 32px;
+	margin-right: 100px;
+}
+
+.picture.blurb .header .heading {
+	min-height: unset;
+}
+
+.tagset.blurb .header .heading {
+	margin: 0 5em 0 60px;
+}
+
+.tagset.blurb .datetime {
+	max-width: max-content;
+}
+
+form .collection .datetime {
+	padding: 0;
+	top: 0;
+}
+
+/*Others*/
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect,
+#stat_chart svg g:nth-of-type(2) > g rect:last-of-type,
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
+	filter: hue-rotate(235deg);
+	opacity: 77% !important;
+}
+
+.statistics .index li:nth-of-type(even) {
+	background: #000000aa;
+}
+
+.sorting.actions h4.heading {
+	display: none;
+}
+
+ul.sorting.actions, 
+ul.view.actions {
+	clear: both;
+}
+
+.reading h4.viewed {
+	background: #444;
+}
+
+.dashboard dl.index {
+	width: -webkit-fill-available;
+	background: #00000066;
+	border-radius: .25em;
+}
+
+dl.index dt {
+	margin: 0 .643em 0;
+	padding: .643em 0 .375em;
+}
+
+dl.index dd {
+	background: none;
+	margin: 0 .643em 0;
+	padding: .375em 0 .643em;
+}
+
+dl.subscription.index.group dd {
+	text-align: end;
+}
+
+dl.subscription.index.group input {
+	width: min-content;
+	height: 2em;
+	line-height: 1.5;
+}
+
+.related_works-index h3.heading {
+	margin: 1.5em auto .5em;
+}
+
+.related_works-index thead, 
+.related_works-index dt {
+	line-height: 1.5;
+}
+
+.related_works-index th:not(:first-child):not(:last-child), 
+.related_works-index td:not(:first-child):not(:last-child) {
+	border-inline: 1px solid #999;
+}
+
+.picture .header {
+	border: none;
+}
+
+/*== 表格table ==*/
+table {
+	background: #00000066;
+	border-radius: .25em;
+	border: none;
+}
+
+th, 
+tr, 
+tr:hover, 
+col.name,
+tfoot,
+tbody tr {
+	background: none;
+	border: none;
+}
+
+thead {
+	background: #222222aa;
+	border: none;
+}
+
+/*==篩選器Filters==*/
+form.filters dl {
+	background: none;
+	margin: 0;
+}
+
+.filters .expander,
+.filters .expanded .expander	{
+	color: #DDD;
+	padding: 0;
+	background: none;
+}
+
+.filters .expander::before {
+	content: "→";
+}
+
+.filters .expanded .expander::before {
+	content: "↓";
+}
+
+input[type=radio],
+input[type=checkbox] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	visibility: hidden;
+	vertical-align: initial;
+	margin-top: 0;
+}
+
+input[type=radio]::before {
+	display: inline-block;
+	content: "";
+	width: 1em;
+	height: 1em;
+	background: #444;
+	border: none;
+	border-radius: 1em;
+	visibility: visible;
+}
+
+input[type=radio]:checked::before {
+	background: #A7B2F2;
+}
+
+input[type=checkbox]::before {
+	display: inline-block;
+	content: "\2714";
+	color: #222;
+	background: #444;
+	border: none;
+	border-radius: .25em;
+	visibility: visible;
+	padding: 0 .2em;
+	height: 1.2em;
+	line-height: 1.2;
+}
+
+input[type=checkbox]:checked::before {
+	color: #000;
+	background: #A7B2F2;
+}
+
+.filters .indicator::before {
+	color: #222;
+	background: #444;
+	border: none;
+}
+
+.filters [type=radio]:checked+.indicator::before {
+	background: #A7B2F2;
+}
+
+.filters [type=checkbox]+.indicator::before {
+	content: " \2714";
+	padding: 0 .2em;
+	height: 1.2em;
+	line-height: 1.2;
+}
+
+.filters [type=checkbox]:checked+.indicator::before {
+	background: #A7B2F2;
+	color: #000;
+}
+
+.filters .exclude [type=checkbox]+.indicator::before {
+	content: " \2718";
+	width: .8em;
+}
+
+.filters .exclude [type=checkbox]:checked+.indicator::before {
+	background: #F2A7B2;
+	color: #000;
+}
+
+.filters input:focus+.indicator+span {
+	outline: none;
+	text-decoration: underline dotted;
+}
+
+.filters .group dt.bookmarker {
+	border: none;
+}
+
+#ui-datepicker-div {
+	background: #000;
+}
+
+.ui-datepicker table {
+	background: #444;
+}
+
+.ui-datepicker td {
+	border-color: #222;
+}
+
+.ui-datepicker tr:hover {
+	background: none;
+}
+
+.ui-datepicker td:hover {
+	background: #000;
+}
+
+/*==留言訊息Inbox==*/
+div.comment, 
+li.comment {
+	background: #00000066;
+	border-color: #000;
+	border-radius: .25em;
+}
+
+.comment div.icon {
+	border: none;
+}
+
+.comment h4.byline {
+	background: #222;
+}
+
+.replied {
+	font-weight: normal;
+	color: #A7F2B2;
+	background: #000;
+	border-color: #A7F2B2;
+}
+
+span.unread {
+	font-weight: normal;
+	color: #F2A7B2;
+	background: #000;
+	border-color: #F2A7B2;
+}
+
+/*==作品頁面Work page==*/
+.work.meta.group dt {
+	font-size: 0;
+}
+
+.work.meta.group dd {
+	width: auto;
+}
+
+.work.meta.group dd.stats {
+	float: right;
+}
+
+.work.meta dd ul.commas li {
+	padding: 0;
+}
+
+span.series .divider {
+	color: #999;
+}
+
+.work.meta dd.published {
+	padding-left: 0;
+}
+
+#workskin {
+	max-width: 50em;
+	margin: auto;
+	padding: 0;
+}
+
+.userstuff.module[role="article"], 
+#work+.userstuff {
+	max-width: 95%;
+	background: #00000066;
+	border-radius: .5em;
+	padding: .643em 2.5% 1.286em;
+}
+
+div.preface {
+	margin: 1.5em;
+}
+
+.preface h3 {
+	color: #DDD;
+	border: none;
+}
+
+.chapter .preface {
+	border-color: #444;
+}
+
+.preface a:hover {
+	text-decoration: unset;
+}
+
+/*chapter index/download*/
+.chapter .secondary,
+.download .secondary {
+	top: initial;
+	right: 25%;
+	left: 25%;
+	margin: 2.5em 0;
+}
+
+/*comment thread*/
+.comment fieldset,
+.thread .post.comment {
+	background: none;
+	border: none;
+}
+
+.thread .odd {
+	background: #000000aa;
+}
+
+.thread .even {
+	background: #222222aa;
+}
+
+/*adding bookmarks*/
+.toggled form,
+.dynamic form {
+	color: #fff;
+	background: #000;
+	border-color: #222;
+	border-radius: .25em;
+}
+
+.toggled form p.footnote, 
+.dynamic form p.footnote, 
+.toggled .bookmark form p.footnote {
+	padding: .643em;
+	line-height: 1.25;
+}
+
+.toggled form input[type=checkbox]+label,
+.dynamic form input[type=checkbox]+label,
+input[type=checkbox]+label {
+	padding-left: 0;
+	margin-right: 1em;
+}
+
+/*Userstuff headings*/
+.userstuff h2 {
+	color: #DDD;
+}
+
+.userstuff h3,
+.usersutff h6 {
+	border-color: #444;
+}
+
+.userstuff hr {
+	margin: .875em auto 1.75em;
+}
+
+/*==編輯頁面Edit page==*/
+fieldset,
+form.single fieldset {
+	background: #00000066;
+	border-color: transparent;
+	border-radius: .5em;
+}
+
+form.single legend,
+form.verbose legend, 
+.verbose form legend {
+	font-weight: 700;
+	background: #000;
+	border: 2px solid;
+	border-color: #222;
+	border-radius: .25em;
+}
+
+form dt {
+	border-color: #222;
+}
+
+form dd.required,
+.post .required .warnings, 
+dd.required {
+	color: #A7B2F2;
+}
+
+.required .autocomplete {
+	color: #FFF;
+}
+
+.autocomplete li.added, 
+.post .meta dd ul li.added {
+	line-height: 1.75;
+}
+
+form dl,
+fieldset dl dl, 
+form blockquote.userstuff {
+	background: #00000066;
+	border-color: transparent;
+	border-radius: .25em;
+}
+
+fieldset fieldset, 
+fieldset .listbox, 
+fieldset .listbox .index, 
+fieldset fieldset.listbox,
+li.search fieldset {
+	background: none;
+	border-color: transparent;
+} 
+
+fieldset fieldset .listbox, 
+fieldset fieldset fieldset {
+	background: #00000066;
+	border-color: #222;
+	border-radius: .5em;
+}
+
+.listbox>.heading ul.actions {
+	margin-top: -0.75em;
+}
+
+/*==輸入框Input/Textarea==*/
+select,
+input, 
+textarea,
+.autocomplete div.dropdown ul {
+	color: #fff;
+	background: #222;
+	border-color: #444;
+	border-radius: .25em;
+	width: -webkit-fill-available;
+}
+
+form.search input[type=text] {
+	background: #222;
+	border-color: #444;
+}
+
+select:focus, 
+input:focus, 
+textarea:focus {
+	color: #fff;
+	background: #000;
+	border-color: #222;
+	border-radius: .25em;
+}
+
+form.search input[type=text]:focus {
+	color: #fff;
+	background: #000;
+	border-color: #222;
+}
+
+.autocomplete .dropdown ul li:hover, 
+.autocomplete .dropdown li.selected {
+	color: #fff;
+	background: #000;
+}
+
+.dropdown {
+	background: none;
+}
+
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active, 
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+	border-color: #F2A7B2;
+}
+
+/*==notice、error、caution==*/
+.required {
+	color: #F2A7B2;
+}
+
+.error, 
+.required.notice {
+	color: #000;
+	background: #F2A7B2;
+	border: 1px solid #F2A7B2;
+}
+
+.LV_invalid,
+.alert.flash,
+.comment_error, 
+.kudos_error {
+	color: #F2A7B2;
+	background: #000;
+	border: 1px solid #F2A7B2;
+}
+
+.LV_invalid {
+	display: block;
+}
+
+.LV_invalid:before {
+	border-color: #F2A7B2 transparent;
+}
+
+.notice, 
+.comment_notice, 
+.kudos_notice, 
+ul.notes,
+.autocomplete .notice {
+	color: #000;
+	background: #F2E2A7;
+	border: 1px solid #F2E2A7;
+}
+
+.caution {
+	color: #000;
+	background: #CDA7F2;
+	border: 1px solid #CDA7F2;
+}
+
+.error a,
+.notice a,
+.caution a {
+	background: #000000aa;
+	text-decoration: underline;
+}
+
+/*==彈出頁面modal==*/
+#modal {
+	background: #000;
+	border-color: #222;
+	border-radius: .25em;
+}
+
+/*==問題Question==*/
+span.symbol {
+	vertical-align: baseline;
+	color: #000;
+	background: #A7B2F2;
+	border-color: #222;
+}
+
+/*==Symbols==*/
+dl.stats dt {
+	display: none;
+}
+
+.work.meta dd.language::before,
+dl.stats dd.words::before,
+dl.stats dd.chapters::before,
+dl.stats dd.collections::before,
+.work.meta dd.collections::before,
+dl.stats dd.comments::before,
+dl.stats dd.kudos::before,
+dl.stats dd.bookmarks::before,
+dl.stats dd.hits::before,
+dl.stats dd.series::before,
+.work.meta dd.series::before,
+dl.stats dd.published::before,
+dl.stats dd.status::before,
+dl.stats dd.subscriptions::before,
+.bookmark .user.module.group h5.byline.heading::before,
+.bookmark .meta.commas::before,
+.series.meta dl.stats dd::before,
+li[class*="series-"] dl.stats dd::before,
+li[class*="external-work"] dl.stats dd::before,
+li.collection dl.stats dd::before,
+.tagset dl.stats dd::before {
+	display: inline-block;
+	content: "";
+	width: 15px;
+	height: 15px;
+	background-size: 15px !important;
+	margin: 0px 3px -2px 0;
+}
+
+.work.meta dd.language::before {
+	background: url(https://i.ibb.co/R9kL5F0/lang.png);
+}
+
+dl.stats dd.words::before,
+.series.meta dl.stats dd:first-of-type:not([class])::before,
+li[class*="series-"] dl.stats dd:first-of-type:not([class])::before {
+	background: url(https://i.ibb.co/HCv1bSG/image.png);
+}
+
+dl.stats dd.chapters::before,
+.series.meta dl.stats dd:nth-of-type(2):not([class])::before,
+li[class*="series-"] dl.stats dd:nth-of-type(2):not([class])::before {
+	background: url(https://i.ibb.co/XtLW1Gr/page.png);
+}
+
+dl.stats dd.collections::before,
+.work.meta dd.collections::before,
+li.collection dl.stats dd:has(a[href*="/collections"])::before,
+.bookmark .meta.commas::before {
+	background: url(https://i.ibb.co/3dx21sP/image.png);
+}
+
+dl.stats dd.comments::before {
+	background: url(https://i.ibb.co/wNLh0GX/image.png);
+}
+
+dl.stats dd.kudos::before {
+	background: url(https://i.ibb.co/bWp7KC4/kudo.png);
+}
+
+dl.stats dd.bookmarks::before,
+.series.meta dl.stats dd:nth-of-type(4):not([class])::before,
+li[class*="series-"] dl.stats dd:nth-of-type(3):not([class])::before,
+li[class*="external-work"] dl.stats dd:has(a:is([href*="/external_works"][href*="/bookmarks"]))::before,
+li.collection dl.stats dd:has(a[href*="/bookmarks"])::before {
+	background: url(https://i.ibb.co/x8q45z7/image.png);
+}
+
+dl.stats dd.hits::before {
+	background: url(https://i.ibb.co/VV8myx8/image.png);
+}
+
+dl.stats dd.series::before,
+.work.meta dd.series::before,
+li[class*="external-work"] dl.stats dd:has(a[href*="/external_works"])::before,
+li.collection dl.stats dd:has(a[href*="/works"])::before {
+	background: url(https://i.ibb.co/JdmPgcB/work.png);
+}
+
+dl.stats dd.published::before {
+	background: url(https://i.ibb.co/5smgps0/image.png);
+}
+
+dl.stats dd.status::before,
+.series.meta dl.stats dd:nth-of-type(3):not([class])::before {
+	background: url(https://i.ibb.co/NCMzpdf/image.png);
+}
+
+dl.stats dd.subscriptions::before {
+	background: url(https://i.ibb.co/5sxHwvm/image.png);
+}
+
+li.collection dl.stats dd:has(a[href*="/fandoms"])::before,
+.tagset dl.stats dd:first-of-type::before {
+	background: url(https://i.ibb.co/py1xqKp/image.png);
+}
+
+li.collection dl.stats dd:has(a[href*="/requests"])::before {
+	background: url(https://i.ibb.co/KqKcLVJ/image.png);
+}
+
+.tagset dl.stats dd:nth-of-type(2)::before {
+	background: url(https://i.ibb.co/Hxkkmh1/image.png);
+}
+
+.tagset dl.stats dd:nth-of-type(3)::before {
+	background: url(https://i.ibb.co/mtjwTnh/image.png);
+}
+
+.tagset dl.stats dd:last-of-type::before,
+.bookmark .meta.tags.commas::before {
+	background: url(https://i.ibb.co/6HyYXXy/image.png);
+}
+
+.bookmark h5.byline.heading::before {
+	background: url(https://i.ibb.co/qxw8601/pin.png);
+}
+
+/*RSS*/
+a.rss span {
+	line-height: 13.85px;
+	display: inline-block;
+}
+
+/*==超連結anchor==*/
+a,
+a:link,
+a:visited,
+a:link:visited,
+.blurb h4 a:link,
+.blurb h4 a:visited,
+.listbox .heading a:visited {
+	color: #A7B2F2;
+	border: none;
+}
+
+/*---if don't need this, delete the section---*/
+
+.blurb h4 a:visited {
+	color: #F2C2A7;
+}
+
+a:hover,
+a:focus,
+a:visited:hover,
+a:visited:focus,
+a:link:hover,
+a:link:focus,
+a:link:visited:hover,
+a:link:visited:focus,
+.blurb h4 a:link:hover,
+.blurb h4 a:link:focus, 
+.blurb h4 a:visited:hover,
+.blurb h4 a:visited:focus,
+.listbox .heading a:visited:hover,
+.listbox .heading a:visited:focus,
+.splash .favorite li:nth-of-type(odd) a:hover, 
+.splash .favorite li:nth-of-type(odd) a:focus,
+.splash .favorite li:nth-of-type(even) a:hover, 
+.splash .favorite li:nth-of-type(even) a:focus,
+.blurb dl.stats dd.chapters a:hover,
+.blurb dl.stats dd.chapters a:focus,
+.bookmark .count a:hover, 
+.bookmark .count a:focus,
+#footer a:hover,
+#footer a:focus {
+	color: #000;
+	background: #A7B2F2;
+}
+
+/*Tags*/
+a.tag,
+a.tag:link,
+a.tag:visited,
+.listbox .heading a.tag:visited {
+	display: inline-block;
+	/*color: #A7B2F2;*/
+	color: #FFF;
+	background: #000000aa;
+	line-height: 1.25;
+	padding: .191em .382em;
+	margin: 3px .25em 3px 0;
+	border: none;
+	border-radius: 1em;
+}
+
+li.warnings a.tag,
+dd.warning a.tag {
+	color: #F2A7B2;
+	/*background: #F2A7B244;*/
+}
+
+li.relationships a.tag,
+dd.relationship a.tag {
+	color: #A7F2B2;
+	/*background: #A7F2B244; */
+}
+
+li.characters a.tag,
+dd.character a.tag {
+	color: #F2E2A7;
+	/*background: #F2E2A744; */
+}
+
+li.freeforms a.tag,
+dd.freeform a.tag {
+	color: #A7B2F2;
+	/*background: #A7B2F244; */
+}
+
+.tags.commas:not(.group) li:after,
+.tags .commas:not(.group) li:after {
+	font-size: 0;
+}
+
+a.tag:hover,
+a.tag:focus,
+a.tag:link:hover,
+a.tag:link:focus,
+a.tag:visited:hover,
+a.tag:visited:focus,
+.listbox .heading a.tag:visited:hover,
+.listbox .heading a.tag:visited:focus {
+	color: #000 !important;
+	background: #A7B2F2 !important;
+}
+
+/*==標籤雲Tag Clouds==*/
+a.cloud1.tag {
+	color: #A7B2F2;
+	font-weight: 300;
+	font-size: 0.75em;
+}
+
+a.cloud2.tag {
+	color: #A7F2B2;
+	font-weight: 400;
+	font-size: 0.875em;
+}
+
+a.cloud3.tag {
+	color: #F2E2A7;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+a.cloud4.tag {
+	color: #F2C2A7;
+	font-weight: 600;
+	font-size: 1.25em;
+}
+
+a.cloud5.tag {
+	color: #F2A7B2;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+a.cloud6.tag {
+	color: #CDA7F2;
+	font-weight: 700;
+	font-size: 1.75em;
+}
+
+a.cloud7.tag {
+	color: #A7F2B2;
+	font-weight: 800;
+	font-size: 2em;
+}
+
+a.cloud8.tag {
+	color: #A7B2F2;
+	font-weight: 900;
+	font-size: 2.5em;
+}
+
+/*==按鈕樣式==*/
+.actions a, 
+.actions a:link, 
+.action, 
+.action:link, 
+.actions input, 
+input[type=submit], 
+button, 
+#header #search .button,
+.actions label,
+.actions a:visited, 
+.action:visited, 
+.action a:link, 
+.action a:visited {
+	background: #222;
+	border: 1px solid #444;
+	color: #fff;
+}
+
+.current, 
+a.current, 
+a:link.current, 
+.current a:visited,
+.actions a.current {
+	background: #000;
+	border: 1px solid #222;
+	color: #A7B2F2;
+	font-weight: bold;
+}
+
+.actions a:hover, 
+.actions a:focus, 
+.actions a:link:hover, 
+.actions a:link:focus, 
+.action:hover, 
+.action:focus, 
+.action:link:hover, 
+.action:link:focus, 
+.actions input:hover, 
+.actions input:focus, 
+input[type=submit]:hover, 
+input[type=submit]:focus, 
+button:hover, 
+button:focus, 
+#header #search .button:hover,
+#header #search .button:focus,
+.actions a:visited:hover, 
+.actions a:visited:focus, 
+.action:visited:hover, 
+.action:visited:focus, 
+.action a:link:hover, 
+.action a:link:focus, 
+.action a:visited:hover, 
+.action a:visited:focus,
+label.action:hover,
+label.action:focus {
+	background: #000;
+	border: 1px solid #A7B2F2;
+	color: #A7B2F2;
+}
+
+.actions input[type=checkbox]:hover, 
+.actions input[type=checkbox]:focus {
+	border: 0;
+}
+
+.heading .actions, 
+.heading .action, 
+.heading span.actions {
+	font-weight: normal;
+}
+
+.heading .action a:link, 
+.heading .action a:link:hover, 
+.heading .action a:link:focus {
+	background: none;
+	border: none;
+}
+
+/*==其他調整Other Settings==*/
+.tagset .media .listbox {
+	width: auto;
+}
+
+.icon,
+.icon img {
+	border-radius: .25em;
+}
+
+li::marker {
+	color: #A7B2F2;
+}
+
+.notice li::marker,
+.notes:not(.module) li::marker,
+.error li::marker {
+	color: #000;
+}
+
+.userstuff blockquote {
+	border-inline-start: 2px solid #A7B2F2;
+}
+
+q::before, q::after {
+	color: #A7B2F2;
+}
+
+::selection {
+	background: #A7B2F2;
+	color: #000;
+}
+
+::-webkit-scrollbar {
+	width: 9px;
+	height: 9px;
+	background: #444;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #A7B2F2;
+	border-radius: 9px;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #A7B2F2aa;
+}
+
+/*==圖示組Imageset==*/
+p.kudos,
+a.rss span,
+.required-tags .rating-general-audience,
+.required-tags .rating-explicit,
+.required-tags .rating-mature,
+.required-tags .rating-notrated,
+.required-tags .category-none,
+.required-tags .warning-no,
+.status .count,
+.required-tags .rating-teen,
+.required-tags .category-femslash,
+.required-tags .category-gen,
+.required-tags .category-slash,
+.required-tags .category-het,
+.required-tags .category-multi,
+.required-tags .category-other,
+.required-tags .complete-no,
+.required-tags .complete-yes,
+.required-tags .warning-yes,
+.required-tags .warning-choosenotto,
+.required-tags .external-work,
+.status .private .text,
+.status .public,
+.status .hidden,
+.status .rec,
+.index .skins .icon,
+.index .mystery .icon,
+.index .tag .icon,
+.index .tagset .icon,
+.comment .icon .anonymous,
+.comment .icon .visitor,
+.abbreviated .icon .anonymous,
+.abbreviated .icon .visitor,
+.skins .primary .icon,
+.admin .primary .icon,
+.tag .primary .icon,
+.tagset .primary .icon {
+	background-image: url("https://i.ibb.co/KwhXv8y/imageset.png");
+}
+
+p.kudos {
+	background-position: -110px -580px;
+}
+
+a.rss span {
+	background-position: -150px -275px;
+}
+
+.required-tags .rating-general-audience {
+	background-position: -50px -25px;
+}
+
+.required-tags .rating-explicit {
+	background-position: -25px -25px;
+}
+
+.required-tags .rating-mature {
+	background-position: -75px -25px;
+}
+
+.required-tags .rating-notrated,
+.required-tags .category-none,
+.required-tags .warning-no,
+.status .count {
+	background-position: -150px 0px;
+}
+
+.required-tags .rating-teen {
+	background-position: 0px -25px;
+}
+
+.required-tags .category-femslash {
+	background-position: -25px 0px;
+}
+
+.required-tags .category-gen {
+	background-position: -50px 0px;
+}
+
+.required-tags .category-slash {
+	background-position: 0px 0px;
+}
+
+.required-tags .category-het {
+	background-position: -75px 0px;
+}
+
+.required-tags .category-multi {
+	background-position: -100px -0px;
+}
+
+.required-tags .category-other {
+	background-position: -125px 0px;
+}
+
+.required-tags .complete-no {
+	background-position: -100px -25px;
+}
+
+.required-tags .complete-yes {
+	background-position: -175px -25px;
+}
+
+.required-tags .warning-yes {
+	background-position: -150px -25px;
+}
+
+.required-tags .warning-choosenotto {
+	background-position: -125px -25px;
+}
+
+.required-tags .external-work {
+	background-position: -75px -50px;
+}
+
+.status .private .text {
+	background-position: -175px -50px;
+}
+
+.status .public {
+	background-position: -125px -50px;
+}
+
+.status .hidden {
+	background-position: -150px -50px;
+}
+
+.status .rec {
+	background-position: -100px -50px;
+}
+
+.index .skins .icon {
+	background-position: 0px -580px;
+}
+
+.index .mystery .icon {
+	background-position: -110px -525px;
+}
+
+.index .tag .icon,
+.index .tagset .icon {
+	background-position: -55px -580px;
+}
+
+.comment .icon .anonymous {
+	background-position: 0px -635px;
+}
+
+.comment .icon .visitor {
+	background-position: 0px -75px;
+}
+
+.abbreviated .icon .anonymous {
+	background-position: 0px -450px;
+}
+
+.abbreviated .icon .visitor {
+	background-position: 0px -375px;
+}
+
+.skins .primary .icon {
+	background-position: 0px -175px;
+}
+
+.admin .primary .icon {
+	background-position: 100px -75px;
+}
+
+.tag .primary .icon,
+.tagset .primary .icon {
+	background-position: 0px -275px;
+}
+
+/*error image*/
+#main.errors {
+  background: url("https://i.ibb.co/TBKSCXF/Sadface.png") top right no-repeat;
+}
+
+/*replace default icons*/
+.icon[src="/images/skins/iconsets/default/icon_user.png"], 
+.picture .icon[src="/images/skins/iconsets/default/icon_user.png"],
+.index .picture .icon[src="/images/skins/iconsets/default/icon_user.png"],
+.comment .icon[src="/images/skins/iconsets/default/icon_user.png"],
+.abbreviated .icon[src="/images/skins/iconsets/default/icon_user.png"],
+.index .picture .icon[src="/images/skins/iconsets/default/icon_collection.png"],
+img[src="/images/skins/iconsets/default/icon_collection.png"]  {
+	background-image: url("https://i.ibb.co/KwhXv8y/imageset.png");
+	width: 0;
+	height: 0;
+}
+
+ .icon[src="/images/skins/iconsets/default/icon_user.png"],
+.comment .icon[src="/images/skins/iconsets/default/icon_user.png"] {
+	padding: 100px 0 0 100px;
+	background-position: 0px -75px;
+}
+
+.picture .icon[src="/images/skins/iconsets/default/icon_user.png"],
+.index .picture .icon[src="/images/skins/iconsets/default/icon_user.png"] {
+	padding: 55px 0 0 55px;
+	background-position: 0px -525px;
+}
+
+.abbreviated .icon[src="/images/skins/iconsets/default/icon_user.png"] {
+	padding: 75px 0 0 75px;
+	background-position: 0px -375px;
+}
+
+.index .picture .icon[src="/images/skins/iconsets/default/icon_collection.png"] {
+	padding: 55px 0 0 55px;
+	background-position: -55px -525px;
+}
+
+img[src="/images/skins/iconsets/default/icon_collection.png"] {
+	padding: 100px 0 0 100px;
+	background-position: -100px -175px;
+	border-radius: .25em;
+ }
+
+/*Replace restricted lock*/
+img[alt="(Restricted)"] {
+	width: 0;
+	height: 0;
+	margin: 3px 0;
+	padding: 15px 0 0 15px;
+	background: url("https://i.ibb.co/VH9KYJr/lockblue.png");
+}
