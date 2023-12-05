@@ -1,0 +1,369 @@
+#outer.wrapper {
+	background-image: url(https://i.imgur.com/6TJ6LWo.png);
+	background-attachment: fixed;
+	background-size: 525%;
+	background-position: 1280px -180px;
+}
+
+#main,
+#main.dashboard,
+#dashboard {
+	padding-inline: 1.5%;
+}
+
+/*==字號font size==*/
+#outer {
+	font-size: 1em;
+}
+
+#header #search,
+#dashboard,
+.bookmark .user .meta {
+	font-size: .925em;
+}
+
+.search input:focus+[role=tooltip] {
+	font-size: .925em;
+	top: 2.25em;
+}
+
+.picture.blurb .header h4.heading a:first-of-type, 
+.picture.blurb .header h4.heading a:only-of-type {
+	font-size: 1.429em;
+}
+
+/*==Header & Footer==*/
+#header .primary {
+	background: #FFFFFF66;
+}
+
+#header .heading, 
+#header #greeting, 
+#header .primary, 
+#header .search, 
+#header .user {
+	float: none;
+	margin: auto;
+	padding: 0;
+}
+
+#header .heading {
+	text-align: center;
+}
+
+#greeting .user > li {
+	display: inline-block;
+	line-height: 2;
+}
+
+#header .dropdown, 
+#header li {
+	display: inline-block;
+	float: none;
+	margin: auto;
+	padding: 0;
+}
+
+#header .search {
+	margin-bottom: .25em;
+}
+
+#footer ul {
+	padding: 1em 2%;
+	width: 96%;
+}
+
+#footer .module {
+	max-width: 44%;
+	margin: 1%;
+}
+
+/*==Dashboard page==*/
+.home .header h2 {
+	text-align: center;
+	margin: .429em 0 .25em;
+}
+
+.primary p.icon,
+.primary div.icon {
+	position: relative;
+	margin: .429em auto;
+}
+
+.home .header ul.actions {
+	width: 100%;
+	padding: 0;
+	margin: 0 0 .429em;
+}
+
+.home .header .userstuff {
+	margin-left: .643em;
+}
+
+ .home .header dl.stats, 
+ .home .header .type {
+	margin-left: 0;
+}
+
+/*==Work blurb==*/
+.blurb .header h4.heading, 
+.blurb .header h5.fandoms.heading {
+	margin: 6px 0;
+}
+
+.blurb .header h4.heading {
+	margin-top: .643em;
+}
+
+.blurb h5.fandoms.heading a.tag {
+	margin-inline: 3px;
+}
+
+.blurb .datetime {
+	max-width: 100%;
+	text-align: center;
+	position: static;
+	margin: 3px 0 6px;
+}
+
+.blurb ul.required-tags {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	position: static;
+	top: initial;
+	margin: 0 0 3px;
+	line-height: 0;
+}
+
+.blurb ul.required-tags li + li + li,
+.blurb ul.required-tags li + li + li + li {
+	position: static;
+}
+
+.blurb ul.required-tags li {
+	display: inline-flex;
+	vertical-align: middle;
+	margin: 3px 0;
+}
+
+.bookmark p.status {
+	position: relative;
+	right: initial;
+	z-index: initial;
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	line-height: 1.5;
+}
+
+
+.bookmark .status span,
+.bookmark .status a {
+	display: inline-block;
+	position: relative;
+}
+
+.bookmark .status a:focus {
+	overflow: initial;
+}
+
+.bookmark span.count {
+	text-align: center;
+	line-height: inherit;
+	position: relative;
+	top: initial;
+	left: initial;
+}
+
+.bookmark .status .private,
+.bookmark .status .hidden,
+.bookmark .status .private .text, 
+.bookmark .status .hidden .text {
+	vertical-align: top;
+}
+
+/*Other blurb*/
+.bookmark .user.group .datetime, 
+.bookmark .recent .short .datetime, 
+.bookmark .user.group .status {
+	max-width: max-content;
+	position: absolute;
+	margin: 0;
+}
+
+.picture.blurb .header h4.heading {
+	margin: 6px 60px;
+}
+
+.picture.blurb .datetime {
+	max-width: 60px;
+	position: absolute;
+	text-align: right;
+}
+
+.pseud.blurb .header h5.heading,
+.picture.blurb .header ul {
+	margin: 6px 0;
+}
+
+.tagset.blurb .header h4.heading {
+	margin: 6px 5.5em 0 60px;
+	min-height: 53px;
+}
+
+.tagset.blurb .datetime {
+	max-width: 100%;
+	position: absolute;
+}
+
+/*limit height for tags and mark for later*/
+.blurb .fandoms {
+	max-height: 100px;
+	overflow-y: auto;
+}
+
+.blurb .tags.commas {
+	max-height: 18em;
+	overflow-y: auto;
+}
+
+.splash .blurb .fandoms, 
+.splash .blurb .tags.commas {
+	max-height: unset;
+}
+
+::-webkit-scrollbar {
+	width: unset;
+	height: unset;
+	background: unset;
+}
+
+/*==Meta==*/
+.home .meta dt,
+.statistics.meta dt,
+.series.meta dt {
+	float: left;
+	width: 25%;
+}
+
+.home .meta dd,
+.statistics.meta dd,
+.series.meta dd {
+	float: left;
+}
+
+.home .meta .datetime:has(abbr),
+.home .meta dd p,
+.home .meta dd ul:not([class]),
+.series.meta dd blockquote {
+	margin-top: .643em;
+}
+
+/*==Work page==*/
+.chapter .secondary, 
+.download .secondary {
+	right: 5%;
+	left: 5%;
+}
+
+.work.meta dd {
+	margin-left: 0;
+}
+
+.work.meta .stats dl, 
+.work.meta .stats dl dd {
+	float: none;
+	display: inline-block;
+}
+
+.work.meta dd.stats {
+	margin: .643em 0 0 1.286em;
+}
+
+.work.meta .stats dl dd {
+	margin-bottom: .375em;
+}
+
+div.preface {
+	margin: 1.5em 1em;
+}
+
+/*==Comment==*/
+.comment .icon .visitor,
+.comment .icon[src="/images/skins/iconsets/default/icon_user.png"],
+.abbreviated .icon[src="/images/skins/iconsets/default/icon_user.png"] {
+	background-position: -2px -527px;
+}
+
+.comment .icon[src="/images/skins/iconsets/default/icon_user.png"],
+.abbreviated .icon[src="/images/skins/iconsets/default/icon_user.png"] {
+	width: 0;
+	height: 0;
+	padding: 50px 0 0 50px;
+}
+
+.comment .icon .anonymous,
+.abbreviated .icon .anonymous {
+	background-position: -13px -462px;
+}
+
+/*==other==*/
+form[action="/bookmarks"] fieldset, 
+form[action="/bookmarks"] fieldset dl {
+	margin-inline: 0;
+}
+
+form[action="/admin_posts"] p {
+	display: inline-block;
+}
+
+label input[type=checkbox] {
+	margin-block: auto;
+}
+
+.concise li {
+	width: 100%;
+	margin-right: 0;
+}
+
+/*--what if i want to change some action buttons' width?--*/
+/*[Hide Creator's Style]*/ .work.actions li.style a,
+ /*[Add To Collection]*/ #add_collection_link a,
+/*[Show Most Recent Bookmarks]*/ .actions li[style].showme a, 
+/*[Hide Most Recent Bookmarks]*/ .recent.dynamic a.action[href*="hide_recent"]  {
+	white-space: unset;
+	width: min-content;
+	overflow: hidden;
+	text-align: center;
+}
+
+/*[previous chapter]*/ .work.actions li.chapter.previous a, 
+/*[next chapter]*/ .work.actions li.chapter.next a {
+	white-space: unset;
+	word-wrap: break-word;
+	width: 1em;
+	overflow: hidden;
+}
+
+/*add a ":before" to replace the content. since it is now allow text-wrap, can only type in one word (put a space after)*/
+.work.actions li.style a:before {
+	content: "WorkSkin ";
+	vertical-align: super;
+}
+
+#add_collection_link a:before {
+	content: "Collection ";
+	vertical-align: super;
+}
+
+.work.actions li.chapter.previous a:before {
+	content: "← ";
+	vertical-align: super;
+}
+
+.work.actions li.chapter.next a:before {
+	content: "→ ";
+	vertical-align: super;
+}
