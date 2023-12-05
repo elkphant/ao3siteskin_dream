@@ -1,10 +1,13 @@
+/*--paste images' link indside url(), and change value to fit your screen--*/
+/*
 #outer.wrapper {
-	background-image: url(https://i.imgur.com/6TJ6LWo.png);
+	background-image: url();
 	background-attachment: fixed;
 	background-size: 525%;
 	background-position: 1280px -180px;
 }
-
+*/
+		
 #main,
 #main.dashboard,
 #dashboard {
