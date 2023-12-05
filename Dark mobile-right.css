@@ -163,47 +163,6 @@
 	margin-right: 64px;
 }
 
-/*
-.blurb .datetime {
-	max-width: 100%;
-	text-align: center;
-	position: static;
-	margin: 3px 0 6px;
-}
-
-.blurb ul.required-tags {
-	display: inline-block;
-	width: 100%;
-	text-align: center;
-	position: static;
-	top: initial;
-	margin: 0 0 3px;
-	line-height: 0;
-}
-
-.blurb ul.required-tags li + li + li,
-.blurb ul.required-tags li + li + li + li {
-	position: static;
-}
-
-.blurb ul.required-tags li {
-	display: inline-flex;
-	vertical-align: middle;
-	margin: 3px 0;
-}
-
-.bookmark p.status {
-	position: relative;
-	right: initial;
-	z-index: initial;
-	display: inline-block;
-	width: 100%;
-	margin: 0;
-	text-align: center;
-	line-height: 1.5;
-}
-*/
-
 .bookmark .status span,
 .bookmark .status a {
 	display: inline-block;
