@@ -1067,6 +1067,7 @@ dl.stats dt {
 	display: none;
 }
 
+dl.stats dd.language::before,  /* ----updated 18/06/24*/
 .work.meta dd.language::before,
 dl.stats dd.words::before,
 dl.stats dd.chapters::before,
@@ -1084,8 +1085,10 @@ dl.stats dd.subscriptions::before,
 .bookmark .user.module.group h5.byline.heading::before,
 .bookmark .meta.commas::before,
 .series.meta dl.stats dd::before,
-li[class*="series-"] dl.stats dd::before,
-li[class*="external-work"] dl.stats dd::before,
+/*li[class*="series-"] dl.stats dd::before,
+li[class*="external-work"] dl.stats dd::before,    ----deleted 18/06/24*/
+dl.stats dd.works::before,  /* ----updated 18/06/24*/
+dl.stats dd.inspired::before,  /* ----updated 18/06/24*/
 li.collection dl.stats dd::before,
 .tagset dl.stats dd::before {
 	display: inline-block;
@@ -1096,19 +1099,18 @@ li.collection dl.stats dd::before,
 	margin: 0px 3px -2px 0;
 }
 
+dl.stats dd.language::before,  /* ----updated 18/06/24*/
 .work.meta dd.language::before {
 	background: url(https://i.ibb.co/R9kL5F0/lang.png);
 }
 
-dl.stats dd.words::before,
+dl.stats dd.words::before /*,
 .series.meta dl.stats dd:first-of-type:not([class])::before,
-li[class*="series-"] dl.stats dd:first-of-type:not([class])::before {
+li[class*="series-"] dl.stats dd:first-of-type:not([class])::before  ----deleted 18/06/24*/ {
 	background: url(https://i.ibb.co/HCv1bSG/image.png);
 }
 
-dl.stats dd.chapters::before,
-.series.meta dl.stats dd:nth-of-type(2):not([class])::before,
-li[class*="series-"] dl.stats dd:nth-of-type(2):not([class])::before {
+dl.stats dd.chapters::before {
 	background: url(https://i.ibb.co/XtLW1Gr/page.png);
 }
 
@@ -1128,9 +1130,9 @@ dl.stats dd.kudos::before {
 }
 
 dl.stats dd.bookmarks::before,
-.series.meta dl.stats dd:nth-of-type(4):not([class])::before,
+/*.series.meta dl.stats dd:nth-of-type(4):not([class])::before,
 li[class*="series-"] dl.stats dd:nth-of-type(3):not([class])::before,
-li[class*="external-work"] dl.stats dd:has(a:is([href*="/external_works"][href*="/bookmarks"]))::before,
+li[class*="external-work"] dl.stats dd:has(a:is([href*="/external_works"][href*="/bookmarks"]))::before,  ----deleted 18/06/24*/
 li.collection dl.stats dd:has(a[href*="/bookmarks"])::before {
 	background: url(https://i.ibb.co/x8q45z7/image.png);
 }
@@ -1141,8 +1143,12 @@ dl.stats dd.hits::before {
 
 dl.stats dd.series::before,
 .work.meta dd.series::before,
-li[class*="external-work"] dl.stats dd:has(a[href*="/external_works"])::before,
-li.collection dl.stats dd:has(a[href*="/works"])::before {
+/*.series.meta dl.stats dd:nth-of-type(2):not([class])::before,
+li[class*="series-"] dl.stats dd:nth-of-type(2):not([class])::before,
+li[class*="external-work"] dl.stats dd:has(a[href*="/external_works"])::before,  ----deleted 18/06/24*/
+dl.stats dd.works::before,  /* ----updated 18/06/24*/
+dl.stats dd.inspired::before,  /* ----updated 18/06/24*/
+li.collection:not([class*="item"]) dl.stats dd:has(a[href*="/works"])::before {
 	background: url(https://i.ibb.co/JdmPgcB/work.png);
 }
 
