@@ -274,12 +274,21 @@ dl.meta {
 }
 
 /*==首頁Home page==*/
+/*────deleted 21/05/24────
 .splash > .module > ul {
 	margin: .643em;
 }
 
 .splash > .module > div {
 	margin: .643em !important;
+}
+*/
+
+/*────update 21/05/24────*/
+.splash > .module > ul,
+.splash > .module > div,
+.splash > .module > p {
+	margin: .643em;
 }
 
 .splash .module h3 {
@@ -466,6 +475,11 @@ div.dynamic {
 
 .bookmark .recent .index {
 	width: auto;
+}
+
+/*────updated 18/06/24────*/
+.filtered .bookmark .recent .index {
+	width: 100%;
 }
 
 .bookmark .recent.dynamic .short {
@@ -747,6 +761,7 @@ li.comment {
 
 .comment h4.byline {
 	background: #DCDCDC;
+	border-radius: .25em .25em 0 0;/*────updated 07/01/24────*/
 }
 
 .replied {
@@ -1703,4 +1718,43 @@ img[alt="(Restricted)"] {
 	margin: 3px 0;
 	padding: 15px 0 0 15px;
 	background: url("https://i.ibb.co/hLskrMg/lockblue.png");
+}
+
+/*update: 17/12/23*/
+.ui-sortable li {
+	background: #FFFFFFaa;
+	border-color: transparent;
+	border-radius: .25em;
+}
+
+.ui-sortable li:hover {
+	background: #FFF;
+	border-color: #DDD;
+}
+
+/*update: 07/01/24*/
+a.resp-sharing-button__link:hover {
+	background: none;
+}
+
+/*update: 21/05/24*/
+.merger.module {
+	border: 2px solid transparent;
+}
+
+.merger.module h3 {
+	display: inline-block;
+	margin: 0;
+	padding: .25em;
+}
+
+.merger.module p {
+	margin: 0;
+	padding: .643em;
+}
+
+.tagset .listbox li {
+	float: left;
+	clear: none;
+	margin-right: 1.5em;
 }
