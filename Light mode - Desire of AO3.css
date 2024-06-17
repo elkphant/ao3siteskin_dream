@@ -1753,7 +1753,7 @@ a.resp-sharing-button__link:hover {
 	padding: .643em;
 }
 
-.tagset .listbox li {
+.tagset .listbox .commas li {
 	float: left;
 	clear: none;
 	margin-right: 1.5em;
