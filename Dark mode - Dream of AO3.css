@@ -4,7 +4,7 @@
 其他背景Other background (透明度67% with opacity 67%)：#000000aa、#222222aa、#444444aa
 文字/邊框font/border colors：(白white)#FFF、#DDD、#BBB；(黑black)#000、#222、#444
 主色Main color：藍#A7B2F2
-其他Other colors：綠(已回replied messages)#A7F2B2、黃(提示notice/notes)#F2E2A7、紅(未讀unread- messages)#F2A7B2、橘(注意caution)#F2C2A7、紫#CDA7F2
+其他Other colors：綠(已回replied)#A7F2B2、黃(提示notice/notes)#F2E2A7、紅(未讀unread)#F2A7B2、橘(官方event)#F2C2A7、紫(注意caution)#CDA7F2
 */
 
 body,
@@ -22,7 +22,7 @@ body,
 	background-blend-mode: normal;
 }
 
-/*==去除陰影Delet box shadow==*/
+/*==去除陰影Delete box shadow==*/
 * {
 	box-shadow: none !important;
 }
@@ -97,7 +97,12 @@ code {
 /*==字號font size==*/
 #main,
 .splash .news .meta,
-kbd, tt, code, var, pre, samp {
+kbd, 
+tt, 
+code, 
+var, 
+pre, 
+samp {
 	font-size: .925em;
 }
 
@@ -412,6 +417,11 @@ li.blurb {
 	border-color: #444;
 }
 
+/*────updated ???────*/
+.child {
+	background: none;
+}
+
 /*Work blurb*/
 .blurb .header .heading {
 	text-align: center;
@@ -464,7 +474,10 @@ li.blurb {
 	line-height: 1.5em;
 }
 
-.bookmark .user {
+/*────updated 24/09/24────*/
+.bookmark .user,
+.bookmark li.user.blurb {
+	background: unset;
 	border-color: #444;
 	border-radius: .25em;
 }
@@ -528,6 +541,11 @@ div.dynamic {
 form .collection .datetime {
 	padding: 0;
 	top: 0;
+}
+
+/*────updated 24/09/24────*/
+.recent.module.group {
+	float: left;
 }
 
 /*Others*/
@@ -629,7 +647,7 @@ form.filters dl {
 }
 
 .filters .expander,
-.filters .expanded .expander	{
+.filters .expanded .expander {
 	color: #DDD;
 	padding: 0;
 	background: none;
@@ -1049,6 +1067,19 @@ ul.notes,
 	border: 1px solid #F2E2A7;
 }
 
+/*────updated 23/06/24────*/
+.event .userstuff {
+	color: #000;
+	background: #F2C2A7;
+	border: 1px solid #F2C2A7;
+	border-radius: .25em;
+}
+
+.event .userstuff a {
+	color: #000;
+	text-decoration: underline;
+}
+
 .caution {
 	color: #000;
 	background: #CDA7F2;
@@ -1224,11 +1255,10 @@ a:link:visited,
 	border: none;
 }
 
-/*---if don't need this, delete the section---*/
-
+/*---if don't need this, delete the section
 .blurb h4 a:visited {
 	color: #F2C2A7;
-}
+} ---*/
 
 a:hover,
 a:focus,
@@ -1299,7 +1329,8 @@ dd.freeform a.tag {
 }
 
 .tags.commas:not(.group) li:after,
-.tags .commas:not(.group) li:after {
+.tags .commas:not(.group) li:after,
+.tags.commas.index.group li:after {
 	font-size: 0;
 }
 
@@ -1371,6 +1402,7 @@ a.cloud8.tag {
 .action:link, 
 .actions input, 
 input[type=submit], 
+.announcement input[type=submit], /*----updated 23/06/24*/
 button, 
 #header #search .button,
 .actions label,
@@ -1406,6 +1438,8 @@ a:link.current,
 .actions input:focus, 
 input[type=submit]:hover, 
 input[type=submit]:focus, 
+.announcement input[type=submit]:hover, /*----updated 23/06/24*/
+.announcement input[type=submit]:focus, /*----updated 23/06/24*/
 button:hover, 
 button:focus, 
 #header #search .button:hover,
@@ -1667,7 +1701,7 @@ a.rss span {
 
 /*error image*/
 #main.errors {
-  background: url("https://i.ibb.co/TBKSCXF/Sadface.png") top right no-repeat;
+	background: url("https://i.ibb.co/TBKSCXF/Sadface.png") top right no-repeat;
 }
 
 /*replace default icons*/
@@ -1677,7 +1711,7 @@ a.rss span {
 .comment .icon[src="/images/skins/iconsets/default/icon_user.png"],
 .abbreviated .icon[src="/images/skins/iconsets/default/icon_user.png"],
 .index .picture .icon[src="/images/skins/iconsets/default/icon_collection.png"],
-img[src="/images/skins/iconsets/default/icon_collection.png"]  {
+img[src="/images/skins/iconsets/default/icon_collection.png"] {
 	background-image: url("https://i.ibb.co/KwhXv8y/imageset.png");
 	width: 0;
 	height: 0;
