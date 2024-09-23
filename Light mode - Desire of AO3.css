@@ -4,7 +4,7 @@
 其他背景Other background (透明度67% with opacity 67%)：#FFFFFFaa、#DDDDDDaa、#BBBBBBaa
 文字/邊框font/border colors：(黑black)#000、#222、#444；(白white)#FEFEFE、#DCDCDC、#BABABA
 主色Main color：藍#6047A5
-其他Other colors：綠(已回replied messages)#60A547、黃(提示notice/notes)#DD8D24、紅(未讀unread- messages)#DD2437、橘(注意caution)#DD6524、紫#953EA0
+其他Other colors：綠(已回replied)#60A547、黃(提示notice/notes)#DD8D24、紅(未讀unread)#DD2437、橘(官方event)#DD6524、紫(注意caution)#953EA0
 */
 
 body,
@@ -97,7 +97,12 @@ code {
 /*==字號font size==*/
 #main,
 .splash .news .meta,
-kbd, tt, code, var, pre, samp {
+kbd, 
+tt, 
+code, 
+var, 
+pre, 
+samp {
 	font-size: .925em;
 }
 
@@ -412,6 +417,11 @@ li.blurb {
 	border-color: #BABABA;
 }
 
+/*────updated ???────*/
+.child {
+	background: none;
+}
+
 /*Work blurb*/
 .blurb .header .heading {
 	text-align: center;
@@ -464,7 +474,10 @@ li.blurb {
 	line-height: 1.5em;
 }
 
-.bookmark .user {
+/*────updated 24/09/24────*/
+.bookmark .user,
+.bookmark li.user.blurb {
+	background: unset;
 	border-color: #BABABA;
 	border-radius: .25em;
 }
@@ -528,6 +541,11 @@ div.dynamic {
 form .collection .datetime {
 	padding: 0;
 	top: 0;
+}
+
+/*────updated 24/09/24────*/
+.recent.module.group {
+	float: left;
 }
 
 /*Others*/
@@ -1049,6 +1067,19 @@ ul.notes,
 	border: 1px solid #DD8D24;
 }
 
+/*────updated 23/06/24────*/
+.event .userstuff {
+	color: #FFF;
+	background: #DD6524;
+	border: 1px solid #DD6524;
+	border-radius: .25em;
+}
+
+.event .userstuff a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
 .caution {
 	color: #FFF;
 	background: #953EA0;
@@ -1225,7 +1256,6 @@ a:link:visited,
 }
 
 /*---if don't need this, delete the section---*/
-
 .blurb h4 a:visited {
 	color: #DD6524;
 }
@@ -1299,7 +1329,8 @@ dd.freeform a.tag {
 }
 
 .tags.commas:not(.group) li:after,
-.tags .commas:not(.group) li:after {
+.tags .commas:not(.group) li:after,
+.tags.commas.index.group li:after {
 	font-size: 0;
 }
 
@@ -1371,6 +1402,7 @@ a.cloud8.tag {
 .action:link, 
 .actions input, 
 input[type=submit], 
+.announcement input[type=submit], /*----updated 23/06/24*/
 button, 
 #header #search .button,
 .actions label,
@@ -1406,6 +1438,8 @@ a:link.current,
 .actions input:focus, 
 input[type=submit]:hover, 
 input[type=submit]:focus, 
+.announcement input[type=submit]:hover, /*----updated 23/06/24*/
+.announcement input[type=submit]:focus, /*----updated 23/06/24*/
 button:hover, 
 button:focus, 
 #header #search .button:hover,
@@ -1677,7 +1711,7 @@ a.rss span {
 .comment .icon[src="/images/skins/iconsets/default/icon_user.png"],
 .abbreviated .icon[src="/images/skins/iconsets/default/icon_user.png"],
 .index .picture .icon[src="/images/skins/iconsets/default/icon_collection.png"],
-img[src="/images/skins/iconsets/default/icon_collection.png"]  {
+img[src="/images/skins/iconsets/default/icon_collection.png"] {
 	background-image: url("https://i.ibb.co/k9mJWDb/imageset.png");
 	width: 0;
 	height: 0;
